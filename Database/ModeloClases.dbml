@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="CN_WORKSPACE_MAIN" Class="ModeloClasesDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=10.14.0.200;Initial Catalog=CN_WORKSPACE_MAIN;Persist Security Info=True;User ID=webapiwde" SettingsObjectName="Genesyslab.Desktop.Modules.InteractionExtensionCrossnet.Properties.Settings" SettingsPropertyName="CN_WORKSPACE_MAINConnectionString" Provider="System.Data.SqlClient" />
+  <Function Name="wde.SXXX_TRAE_ARBOL_DE_TIPIFICACION" Method="SXXX_TRAE_ARBOL_DE_TIPIFICACION">
+    <ElementType Name="SXXX_TRAE_ARBOL_DE_TIPIFICACIONResult">
+      <Column Name="DICCIONARIO_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DESCRIPCION" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="VISTA" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="DEPENDIENTE" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ACTIVO" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="JERARQUIA" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="NIVEL" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TIPO_DATO" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="wde.SXXX_TRAE_HISTORIAL" Method="SXXX_TRAE_HISTORIAL">
+    <Parameter Name="ANI" Parameter="aNI" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="DNIS" Parameter="dNIS" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="TIPO" Parameter="tIPO" Type="System.String" DbType="VarChar(10)" />
+    <ElementType Name="SXXX_TRAE_HISTORIALResult">
+      <Column Name="INTERACCION_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FECHA_HORA_INGRESO" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ANI" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="[1-OPCION]" Member="_1_OPCION" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="USERNAME" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="MOTIVO" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="OBSERVACIONES" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="TIPO" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="wde.XIUD_INSERTA_TIPIFICACION" Method="XIUD_INSERTA_TIPIFICACION">
+    <Parameter Name="tipificacion_connid" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="username_agente" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="tipificacion_motivo" Type="System.String" DbType="VarChar(500)" />
+    <Parameter Name="tipificacion_Observaciones" Type="System.String" DbType="VarChar(250)" />
+    <Parameter Name="estado_tipificacion" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="campana" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="IDS" Parameter="iDS" Type="System.String" DbType="VarChar(MAX)" />
+    <Parameter Name="output" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <ElementType Name="XIUD_INSERTA_TIPIFICACIONResult">
+      <Column Name="ErrorNumber" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ErrorSeverity" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ErrorState" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ErrorProcedure" Type="System.String" DbType="NVarChar(128)" CanBeNull="true" />
+      <Column Name="ErrorLine" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ErrorMessage" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="wde.XXUI_INSERTA_CAMPANA" Method="XXUI_INSERTA_CAMPANA">
+    <Parameter Name="FIRST_NAME" Parameter="fIRST_NAME" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="LAST_NAME" Parameter="lAST_NAME" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="USERNAME" Parameter="uSERNAME" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="tipificacion_connid" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="tipificacion_ani" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="tipificacion_denis" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="tipificacion_tipoInteraccion" Type="System.Int32" DbType="Int" />
+    <Parameter Name="tipificacion_motivo" Type="System.String" DbType="VarChar(500)" />
+    <Parameter Name="tipificacion_Observaciones" Type="System.String" DbType="VarChar(250)" />
+    <Parameter Name="estado_interaccion" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="estado_tipificacion" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="GUID" Parameter="gUID" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="CAMPAING_NAME" Parameter="cAMPAING_NAME" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="FIELD" Parameter="fIELD" Type="System.Xml.Linq.XElement" DbType="Xml" />
+    <Parameter Name="EVENTO" Parameter="eVENTO" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="output" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <ElementType Name="XXUI_INSERTA_CAMPANAResult">
+      <Column Name="ErrorNumber" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ErrorSeverity" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ErrorState" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ErrorProcedure" Type="System.String" DbType="NVarChar(128)" CanBeNull="true" />
+      <Column Name="ErrorLine" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ErrorMessage" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="wde.XXUI_INSERTA_INTERACCION_EMAIL" Method="XXUI_INSERTA_INTERACCION_EMAIL">
+    <Parameter Name="interaccionId" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="interaccionTipo" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="estadoInteraccion" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="estadoTipificacion" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="interaccionFrom" Type="System.String" DbType="VarChar(MAX)" />
+    <Parameter Name="interaccionTo" Type="System.String" DbType="VarChar(MAX)" />
+    <Parameter Name="interaccionCc" Type="System.String" DbType="VarChar(MAX)" />
+    <Parameter Name="interaccionCco" Type="System.String" DbType="VarChar(MAX)" />
+    <Parameter Name="interaccionParentId" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="output" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <ElementType Name="XXUI_INSERTA_INTERACCION_EMAILResult">
+      <Column Name="ErrorNumber" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ErrorSeverity" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ErrorState" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ErrorProcedure" Type="System.String" DbType="NVarChar(128)" CanBeNull="true" />
+      <Column Name="ErrorLine" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ErrorMessage" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="wde.XXUI_INSERTA_INTERACCION" Method="XXUI_INSERTA_INTERACCION">
+    <Parameter Name="FIRST_NAME" Parameter="fIRST_NAME" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="LAST_NAME" Parameter="lAST_NAME" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="USERNAME" Parameter="uSERNAME" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="tipificacion_connid" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="tipificacion_ani" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="tipificacion_denis" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="tipificacion_tipoInteraccion" Type="System.Int32" DbType="Int" />
+    <Parameter Name="tipificacion_motivo" Type="System.String" DbType="VarChar(500)" />
+    <Parameter Name="tipificacion_Observaciones" Type="System.String" DbType="VarChar(250)" />
+    <Parameter Name="estado_interaccion" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="estado_tipificacion" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="estado_area" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="1_CANAL" Parameter="_1_CANAL" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="1_OPCION" Parameter="_1_OPCION" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="1_RUT" Parameter="_1_RUT" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="GUID" Parameter="gUID" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="EVENTO" Parameter="eVENTO" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="output" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <ElementType Name="XXUI_INSERTA_INTERACCIONResult">
+      <Column Name="ErrorNumber" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ErrorSeverity" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ErrorState" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ErrorProcedure" Type="System.String" DbType="NVarChar(128)" CanBeNull="true" />
+      <Column Name="ErrorLine" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ErrorMessage" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+</Database>

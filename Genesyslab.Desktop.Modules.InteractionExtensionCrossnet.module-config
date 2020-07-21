@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<configuration>
+
+	<configSections>
+		<section name="modules"
+						 type="Microsoft.Practices.Composite.Modularity.ModulesConfigurationSection, Microsoft.Practices.Composite" />
+		<section name="tasks"
+						 type="Genesyslab.Desktop.Infrastructure.Config.TasksSection, Genesyslab.Desktop.Infrastructure" />
+	</configSections>
+
+	<tasks>
+		<!-- If the task 'InteractionWorkspace.ExtensionAlMundo.canUse' is granted,
+				the bootstrap downloads the files in the group 'clickOnceGroupsToDownload' if any,
+				and then, the module in the 'modulesToLoad' list are loaded.
+				'clickOnceGroupsToDownload' and 'modulesToLoad' are a coma separated lists -->
+		<!--<task name="InteractionWorkspace.InteractionExtensionAlMundo.canUse" clickOnceGroupsToDownload="InteractionExtensionAlMundo" modulesToLoad="InteractionExtensionAlMundoModule" />-->
+		<task name="InteractionWorkspace.Voice.canUse" clickOnceGroupsToDownload="Voice,OpenMedia"
+					modulesToLoad="InteractionExtensionCrossnetModule" />
+	</tasks>
+
+	<modules>
+		<!-- Uncomment the following to load the module if the corresponding task is granted -->
+		<module assemblyFile="Genesyslab.Desktop.Modules.InteractionExtensionCrossnet.dll"
+						moduleType="Genesyslab.Desktop.Modules.InteractionExtensionCrossnet.InteractionExtensionCrossnetModule"
+						moduleName="InteractionExtensionCrossnetModule"
+						startupLoaded="false" />
+
+		<!-- Load the module-->
+		<!--<module assemblyFile="Genesyslab.Desktop.Modules.InteractionExtensionAlMundo.dll"
+				moduleType="Genesyslab.Desktop.Modules.InteractionExtensionAlMundo.InteractionExtensionAlMundoModule"
+				moduleName="InteractionExtensionAlMundoModule">
+			<dependencies>
+				<dependency moduleName="VoiceModule" />
+			</dependencies>
+		</module>-->
+	</modules>
+
+</configuration>

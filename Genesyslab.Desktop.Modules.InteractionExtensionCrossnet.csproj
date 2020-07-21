@@ -1,0 +1,343 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7F9BC017-A245-4ED5-98E9-DDB8CCC8850B}</ProjectGuid>
+    <OutputType>library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Genesyslab.Desktop.Modules.InteractionExtensionCrossnet</RootNamespace>
+    <AssemblyName>Genesyslab.Desktop.Modules.InteractionExtensionCrossnet</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <NuGetPackageImportStamp>755bb7a3</NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>1</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <WarningLevel>1</WarningLevel>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Genesyslab.Desktop.Infrastructure">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\GCTI\Workspace Desktop Edition\Bin\Genesyslab.Desktop.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Genesyslab.Desktop.Modules.Core">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\GCTI\Workspace Desktop Edition\Bin\Genesyslab.Desktop.Modules.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Genesyslab.Desktop.Modules.OpenMedia">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\GCTI\Workspace Desktop Edition\Bin\Genesyslab.Desktop.Modules.OpenMedia.dll</HintPath>
+    </Reference>
+    <Reference Include="Genesyslab.Desktop.Modules.Outbound">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\GCTI\Workspace Desktop Edition\Bin\Genesyslab.Desktop.Modules.Outbound.dll</HintPath>
+    </Reference>
+    <Reference Include="Genesyslab.Desktop.Modules.Voice">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\GCTI\Workspace Desktop Edition\Bin\Genesyslab.Desktop.Modules.Voice.dll</HintPath>
+    </Reference>
+    <Reference Include="Genesyslab.Desktop.Modules.Windows">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\GCTI\Workspace Desktop Edition\Bin\Genesyslab.Desktop.Modules.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="Genesyslab.Desktop.WPFCommon">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\GCTI\Workspace Desktop Edition\Bin\Genesyslab.Desktop.WPFCommon.dll</HintPath>
+    </Reference>
+    <Reference Include="Genesyslab.Enterprise.Agent">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\GCTI\Workspace Desktop Edition\Bin\Genesyslab.Enterprise.Agent.dll</HintPath>
+    </Reference>
+    <Reference Include="Genesyslab.Enterprise.Interaction">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\GCTI\Workspace Desktop Edition\Bin\Genesyslab.Enterprise.Interaction.dll</HintPath>
+    </Reference>
+    <Reference Include="Genesyslab.Enterprise.Model">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\GCTI\Workspace Desktop Edition\Bin\Genesyslab.Enterprise.Model.dll</HintPath>
+    </Reference>
+    <Reference Include="Genesyslab.Enterprise.Protocols">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\GCTI\Workspace Desktop Edition\Bin\Genesyslab.Enterprise.Protocols.dll</HintPath>
+    </Reference>
+    <Reference Include="Genesyslab.Enterprise.Services.Multimedia">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\GCTI\Workspace Desktop Edition\Bin\Genesyslab.Enterprise.Services.Multimedia.dll</HintPath>
+    </Reference>
+    <Reference Include="Genesyslab.Enterprise.Services.Outbound">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\GCTI\Workspace Desktop Edition\Bin\Genesyslab.Enterprise.Services.Outbound.dll</HintPath>
+    </Reference>
+    <Reference Include="Genesyslab.Platform.ApplicationBlocks.ConfigurationObjectModel, Version=9.0.0.2, Culture=neutral, PublicKeyToken=2248646200015f60, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\GCTI\Workspace Desktop Edition\Bin\Genesyslab.Platform.ApplicationBlocks.ConfigurationObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Genesyslab.Platform.Commons">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\GCTI\Workspace Desktop Edition\Bin\Genesyslab.Platform.Commons.dll</HintPath>
+    </Reference>
+    <Reference Include="Genesyslab.Platform.Commons.Collections">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\GCTI\Workspace Desktop Edition\Bin\Genesyslab.Platform.Commons.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="Genesyslab.Platform.Commons.Protocols">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\GCTI\Workspace Desktop Edition\Bin\Genesyslab.Platform.Commons.Protocols.dll</HintPath>
+    </Reference>
+    <Reference Include="Genesyslab.Platform.OpenMedia.Protocols">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\GCTI\Workspace Desktop Edition\Bin\Genesyslab.Platform.OpenMedia.Protocols.dll</HintPath>
+    </Reference>
+    <Reference Include="Genesyslab.Platform.Outbound.Protocols">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\GCTI\Workspace Desktop Edition\Bin\Genesyslab.Platform.Outbound.Protocols.dll</HintPath>
+    </Reference>
+    <Reference Include="Genesyslab.Platform.Voice.Protocols">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\GCTI\Workspace Desktop Edition\Bin\Genesyslab.Platform.Voice.Protocols.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Composite">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\GCTI\Workspace Desktop Edition\Bin\Microsoft.Practices.Composite.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Composite.Wpf">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\GCTI\Workspace Desktop Edition\Bin\Microsoft.Practices.Composite.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity, Version=1.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\GCTI\Workspace Desktop Edition\InteractionWorkspace\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL" />
+    <Reference Include="PresentationFramework.Aero" />
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Tomers.WPF.Localization">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\GCTI\Workspace Desktop Edition\Bin\Tomers.WPF.Localization.dll</HintPath>
+    </Reference>
+    <Reference Include="UIAutomationProvider">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="PresentationCore">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="PresentationFramework">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Connected Services\WS_nombre\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Database\ModeloClases.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModeloClases.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Model\LogicaAPI\MetodoApi.cs" />
+    <Compile Include="MarkDone\MarkDoneCommand.cs" />
+    <Compile Include="Tipificaciones\EstructuraDatos.cs" />
+    <Compile Include="Model\Interfaz\IMetodoApi.cs" />
+    <Compile Include="Tipificaciones\TipificacionesButtonView.xaml.cs">
+      <DependentUpon>TipificacionesButtonView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Tipificaciones\TipificacionesViewModel.cs" />
+    <Compile Include="Tipificaciones\TipificacionesView.xaml.cs">
+      <DependentUpon>TipificacionesView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Tipificaciones\ITipificacionesButtonView.cs" />
+    <Compile Include="Tipificaciones\ITipificacionesViewModel.cs" />
+    <Compile Include="Tipificaciones\ITipificacionesView.cs" />
+    <Compile Include="Model\InteraccionGenesys.cs" />
+    <Compile Include="Model\GenesysAlert.cs" />
+    <Compile Include="Model\Interaccion.cs" />
+    <Compile Include="Model\TipificacionItem.cs" />
+    <Compile Include="Model\LogicaNegocio.cs" />
+    <Compile Include="Model\Utility.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="InteractionExtensionCrossnetModule.cs" />
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\WS_nombre\EnviarNombre.wsdl" />
+    <None Include="Connected Services\WS_nombre\Genesyslab.Desktop.Modules.InteractionExtensionCrossnet.WS_nombre.envioNombreResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Database\ModeloClases.dbml.layout">
+      <DependentUpon>ModeloClases.dbml</DependentUpon>
+    </None>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Database\ModeloClases.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>ModeloClases.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Genesyslab.Desktop.Modules.InteractionExtensionCrossnet.module-config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Tipificaciones\TipificacionesButtonView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Tipificaciones\TipificacionesView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\logo-header-crossnet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\logo-sernapesca.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\logosernapesca_new_dh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\WS_nombre\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\WS_nombre\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\WS_nombre\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\WS_nombre\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PreBuildEvent>xcopy "C:\Program Files (x86)\GCTI\Workspace Desktop Edition\InteractionWorkspace" "$(TargetDir)" /y /i /s
+xcopy "C:\Program Files (x86)\GCTI\Workspace Desktop Edition\InteractionWorkspaceSIPEndpoint" "$(TargetDir)InteractionWorkspaceSIPEndpoint" /y /i /s
+del "$(TargetDir)Genesyslab.Desktop.Modules.InteractionExtension*.*" /q /f
+del "$(TargetDir)BLL.*" /q /f
+del "$(TargetDir)DAL.*" /q /f
+del "$(TargetDir)Entidades.*" /q /f</PreBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

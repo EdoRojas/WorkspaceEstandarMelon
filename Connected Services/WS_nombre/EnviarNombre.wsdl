@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="envioNombre">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="rut" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="envioNombreResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="envioNombreResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="envioNombreSoapIn">
+    <wsdl:part name="parameters" element="tns:envioNombre" />
+  </wsdl:message>
+  <wsdl:message name="envioNombreSoapOut">
+    <wsdl:part name="parameters" element="tns:envioNombreResponse" />
+  </wsdl:message>
+  <wsdl:portType name="EnviarNombreSoap">
+    <wsdl:operation name="envioNombre">
+      <wsdl:input message="tns:envioNombreSoapIn" />
+      <wsdl:output message="tns:envioNombreSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="EnviarNombreSoap" type="tns:EnviarNombreSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="envioNombre">
+      <soap:operation soapAction="http://tempuri.org/envioNombre" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="EnviarNombreSoap12" type="tns:EnviarNombreSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="envioNombre">
+      <soap12:operation soapAction="http://tempuri.org/envioNombre" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="EnviarNombre">
+    <wsdl:port name="EnviarNombreSoap" binding="tns:EnviarNombreSoap">
+      <soap:address location="http://14.10.0.15:9108/EnviarNombre.asmx" />
+    </wsdl:port>
+    <wsdl:port name="EnviarNombreSoap12" binding="tns:EnviarNombreSoap12">
+      <soap12:address location="http://14.10.0.15:9108/EnviarNombre.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
